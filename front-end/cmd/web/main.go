@@ -7,7 +7,7 @@ import (
 	"net/http"
 )
 
-const PORT = ":5000"
+const PORT = ":5050"
 
 func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
