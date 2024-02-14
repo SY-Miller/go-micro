@@ -50,7 +50,7 @@
                 method: 'POST',
             }
 
-            fetch("http:\/\/localhost:8000", body)
+            fetch({{print .BrokerURL}}, body)
             .then((response) => response.json())
             .then((data) => {
                 sent.innerHTML ="empty post request";
@@ -83,7 +83,7 @@
                 headers: headers
             }
 
-            fetch("http:\/\/localhost:8000/handle", body)
+            fetch({{print .BrokerURL "/handle"}}, body)
             .then((response) => response.json())
             .then((data) => {
                 sent.innerHTML =JSON.stringify(payload, undefined, 4);
@@ -116,7 +116,7 @@
                 headers: headers,
             }
 
-            fetch("http:\/\/localhost:8000/handle", body)
+            fetch({{print .BrokerURL "/handle"}}, body)
             .then((response) => response.json())
             .then((data) => {
                 sent.innerHTML =JSON.stringify(payload, undefined, 4);
@@ -149,7 +149,7 @@
                 headers: headers,
             }
 
-            fetch("http:\/\/localhost:8000/log-grpc", body)
+            fetch({{print .BrokerURL "/log-grpc"}}, body)
             .then((response) => response.json())
             .then((data) => {
                 sent.innerHTML =JSON.stringify(payload, undefined, 4);
@@ -184,7 +184,7 @@
                 headers: headers,
             }
 
-            fetch("http:\/\/localhost:8000/handle", body)
+            fetch({{print .BrokerURL "/handle"}}, body)
             .then((response) => response.json())
             .then((data) => {
                 sent.innerHTML ="empty post request";
